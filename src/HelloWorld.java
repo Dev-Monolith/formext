@@ -6,12 +6,19 @@ public class HelloWorld
 	
 	public static void main(String[] args)
 	{
-		Scanner sc = new Scanner(System.in);
-	
+		//Récupération de l'âge au clavier
 		System.out.println("Quel est ton age ? ");
-		
+		Scanner sc = new Scanner(System.in);
 		int age = sc.nextInt();
 		
-		System.out.print(messages[0] + age + messages[1]);
+		//Affichage du message et l'âge en parcourant le tableau
+		for(int i = 0; i < messages.length; i++)
+		{
+			//Vérification des indices impairs
+			if(i%2 == 1)
+				System.out.print(age);
+			
+			System.out.print(messages[i]);
+		}
 	}
 }
