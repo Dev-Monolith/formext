@@ -1,19 +1,17 @@
+import java.util.Scanner;
+
 public class HelloWorld
 {
-	private static String[] messages = {"Bonjour ", "à tous"};
+	private static String[] messages = {"Tu as ", " ans"};
 	
 	public static void main(String[] args)
 	{
-		for(int i = 0; i < messages.length; i++)
-		{
-			System.out.print(messages[i]);
-		}
+		Scanner sc = new Scanner(System.in);
+	
+		System.out.println("Quel est ton age ? ");
 		
-		System.out.println();
+		int age = sc.nextInt();
 		
-		for(String m : messages)
-		{
-			System.out.print(m);
-		}
+		System.out.print(messages[0] + age + messages[1]);
 	}
 }
